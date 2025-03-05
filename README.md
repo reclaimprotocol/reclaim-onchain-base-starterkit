@@ -1,54 +1,61 @@
-# React + TypeScript + Vite
+# Reclaim Onchain Starter Kit - EVM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a starter kit for building Web3 applications that leverage the Reclaim Protocol for on-chain verification of off-chain data. The project demonstrates how to create an NFT that represents verified GitHub usernames using the Reclaim Protocol.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project consists of two main components:
+1. A Solidity smart contract (`GitHubNFT.sol`) that mints NFTs based on GitHub usernames verified via Reclaim protocol
+2. A React-based frontend application that interacts with the smart contract and Reclaim JS SDK
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Frontend**:
+  - React
+  - TypeScript
+  - Vite
+  - TailwindCSS
+  - RainbowKit
+  - wagmi
+  - viem
+  - React Query
+  - Reclaim JS SDK
+
+- **Smart Contracts**:
+  - Solidity ^0.8.26
+  - OpenZeppelin Contracts
+  - Reclaim Protocol
+
+## Getting Started
+
+1. Install dependencies:
+```bash
+yarn install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Start the development server:
+```bash
+yarn dev
 ```
+
+3. Build the project:
+```bash
+yarn build
+```
+
+## Smart Contract
+
+The `GitHubNFT` contract:
+- Inherits from OpenZeppelin's ERC721URIStorage
+- Verifies GitHub usernames using the Reclaim Protocol
+- Mints unique NFTs for verified GitHub usernames
+- Generates on-chain SVG metadata for the NFTs
+
+## Frontend
+
+The frontend application provides:
+- Wallet connection using RainbowKit
+- Interface for minting GitHub NFTs
+- Display of minted NFTs
+- Integration with Reclaim Protocol for verification
