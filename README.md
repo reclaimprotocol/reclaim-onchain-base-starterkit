@@ -2,6 +2,8 @@
 
 This is a starter kit for building Web3 applications that leverage the Reclaim Protocol for on-chain verification of off-chain data. The project demonstrates how to create an NFT that represents verified GitHub usernames using the Reclaim Protocol.
 
+Try out the demo at: https://reclaim-onchain-starterkit-evm.vercel.app/
+
 ## Overview
 
 This project consists of two main components:
