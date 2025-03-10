@@ -4,7 +4,7 @@ This is a starter kit for building Web3 applications that leverage the Reclaim P
 
 Try out the demo at: https://reclaim-onchain-starterkit-evm.vercel.app/
 
-Link to the Contract : https://sepolia.basescan.org/address/0x87592e9a5ca96dDA389feEfBf0Eea75475EDdC50#code
+Link to the Contract : https://sepolia.basescan.org/address/0x046296a0E28656412573dcf94355F0B9E1c11de8#code
 
 Opensea Collection : https://testnets.opensea.io/collection/githubnft
 
