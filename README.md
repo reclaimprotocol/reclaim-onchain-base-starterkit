@@ -6,7 +6,6 @@ Try out the demo at: https://reclaim-onchain-starterkit-evm.vercel.app/
 
 Link to the Contract : https://sepolia.basescan.org/address/0x046296a0E28656412573dcf94355F0B9E1c11de8#code
 
-Opensea Collection : https://testnets.opensea.io/collection/githubnft
 
 ## Overview
 
